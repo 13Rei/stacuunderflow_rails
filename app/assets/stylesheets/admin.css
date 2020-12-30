@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+a{
+    color: black;
+    display: inline-block;
+}
+
+@font-face{
+    font-family: "UbuntuLight";
+    src: url("../Fonts/Ubuntu-L.ttf");
+}
+
+@font-face{
+    font-family: 'UbuntuBold';
+    src: url("../Fonts/Ubuntu-B.ttf");
+}
+
+.content{
+    width: 76vw;
+    min-height: 100vh;
+    margin: auto;
+    background: linear-gradient(wheat, yellow);
+}
+
+.panel_list{
+    width: 60%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.panel_item{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.inner_panel_item{
+    border-radius: 7px;
+    border: 13px solid rgba(0, 0, 0, 0.355);
+    border-bottom: 40px solid rgba(0, 0, 0, 0.355);
+    width: 400px;
+    height: 220px;
+    background-color: teal;
+}
+
+.question_panel_item{
+    background-color: greenyellow;
+}
+
+.item_text{
+    font-size: 22px;
+    margin: 12px 31px;
+}
+
+.ajkon{
+    float: right;
+    font-size: 67px;
+    color: rgba(0, 0, 0, 0.355);
+    text-align: center;
+}
+
+.counter{
+    font-size: 40px;
+    font-family: UbuntuBold;
+    margin-bottom: 22px;
+}
+
+.user_item{
+    background-color: cornsilk !important;
+    width: 800px !important;
+    height: 400px !important;
+}
+
+.user_pic{
+    float: right;
+    border-radius: 4%;
+    border: 1vh black solid;
+    object-fit: cover;
+}
+
+@media only all and (max-width:1320px){
+    /* .user_item{
+        width: 400px !important;
+        height: 800px !important;
+        display: block;
+    } */
+    .panel_list{
+        margin: 0;
+        position: relative;
+    }
+    .inner_panel_item, .user_item{
+        width: 76vw !important;
+        /* display: flex !important;
+        position: sticky !important; */
+        height: 100% !important;
+    }
+}
+
+@media only all and (max-width:640px){
+    .user_pic{
+        position: relative;
+        clear: both;
+    }
+}
+
+.delete_user{
+    text-align: center;
+    width: 22%;
+    border: crimson 2px solid;
+    margin-top: 140px;
+    padding: 12px 0px;
+    border-radius: 13px;
+}
+
+.delete_user a span{
+    color: maroon;
+}
+
+.question_info{
+    border: 13px solid rgba(0, 0, 0, 0.355);
+    border-radius: 13px;
+    background-color: greenyellow;
+    padding: 20px 60px;
+}
+
+.qreview{
+    margin-top: 20px;
+    color: teal;
+    border: seagreen 2px solid;
+    border-radius: 8px;
+    padding: 5px 14px;
+}
+
+@media only all and (max-width: 958px){
+    .question_info{
+        margin: 0px;
+        margin-top: 20px;
+        width: 76vw !important;
+    }
+}
+
+.xicon{
+    color: maroon;
+    margin-left: 20px;
+}
+
+.yicon{
+    color: green;
+}
+
+.question, .answer_section{
+    margin-top: 22px !important;
+    width: 60%;
+    margin: auto;
+    background-color: whitesmoke;
+}
+
+.question_title{
+    font-size: 40px;
+    padding: 40px 31px;
+    border-bottom: solid #777777 1px;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.question_author{
+    color: #777777;
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px 80px;
+}
+
+.question_body{
+    font-size: 31px;
+    padding: 20px 40px;
+}
+
+.question_body pre{
+    display: block;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.qtitle{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.xicon_posted{
+    margin-top: -80px;
+}
+
+.post_an_answer{
+    margin-top: 22px;
+}
+
+.post_an_answer textarea{
+    margin: 40px;
+    border: 1px rgba(0, 0, 0, 0.14) solid;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 22px;
+}
+
+.submit{
+    font-size: 24px;
+    margin: 12px 4px;
+    padding: 26px 34px;
+    border: none;
+    background: green;
+    color: white;
+    border-radius: 4px;
+    margin-left: 40px;
+}
+
+.tags{
+    margin: 40px 0px;
+    border-top: 1px solid rgba(0, 0, 0, 0.17);
+    padding: 40px 0px;
+}
+
+.tag{
+    color: navy;
+    margin: 15px;
+    background: rgba(200, 220, 220, 1);
+    padding: 12px;
+    font-size: 22px;
+}
+
+.comments{
+    margin: 20px 4px !important;
+}
+
+.comment{
+    margin: 40px 14px;
+    border-bottom: 1px solid #777777;
+}
+
+.commdate{
+    float: right;
+    margin-top: -20px;
+}
+
+.xicon_comments{
+    font-size: 31px !important;
+}
+
+.correct_answer{
+    background-color: greenyellow !important;
+}

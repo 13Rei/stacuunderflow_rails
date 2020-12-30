@@ -1,0 +1,74 @@
+@font-face{
+    font-family: "UbuntuLight";
+    src: url("../Fonts/Ubuntu-L.ttf");
+}
+
+@font-face{
+    font-family: 'UbuntuBold';
+    src: url("../Fonts/Ubuntu-B.ttf");
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    min-height: 100vh;
+}
+
+.footer{
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    background-color: #111111;
+    margin-top: 40px;
+    overflow: scroll;
+}
+
+.footer_content{
+    display: flex;
+}
+
+.footer_content div{
+    flex-basis: 50%;
+    padding: 10px 20px;
+    margin: 0 67px;
+}
+
+.footer_content .footer_logo{
+    width: 100%;
+    color: #ffffff;
+    font-family: UbuntuLight;
+}
+
+.footer_content .footer_logo2{
+    visibility: hidden;
+}
+
+.footer_content .footer_logo b{
+    font-family: UbuntuBold;
+}
+
+.footer_content a{
+    color: #ffffff;
+}
+
+.footer_content a:hover{
+    color: #4a4a4a;
+}
+
+.footer_content div .inner_foot_content{
+    margin: 10px 0 0 0;
+}
+
+@media only all and (max-width: 890px){
+    .footer{
+        position: relative;
+        bottom: 0px;
+    }
+    .footer_content{
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+    }
+}

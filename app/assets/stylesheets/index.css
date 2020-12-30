@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    resize: none;
+}
+
+@font-face{
+    font-family: "UbuntuLight";
+    src: url("../Fonts/Ubuntu-L.ttf");
+}
+
+@font-face{
+    font-family: 'UbuntuBold';
+    src: url("../Fonts/Ubuntu-B.ttf");
+}
+
+b{
+    font-family: UbuntuBold;
+}
+
+.content{
+    width: 76vw;
+    min-height: 100vh;
+    margin: auto;
+    background: linear-gradient(wheat, yellow);
+}
+
+.sidebar{
+    position: absolute;
+    right: 15%;
+}
+
+.spacer{
+    z-index: 0;
+    height: 85px;
+    width: 76vw;
+    margin: auto;
+    background-color: wheat;
+}
+
+.middle_content{
+    padding-top: 20px !important;
+    margin: auto;
+    width: 60%;
+    word-wrap: break-word;
+    clear: both;
+    position: relative;
+}
+
+.page_heading{
+    width: 60%;
+    padding: 8px;
+    border-bottom: 1px solid black;
+}
+
+.inner_question_container{
+    margin: 40px 0px;
+    background-color: blanchedalmond;
+    border-radius: 20px;
+    padding: 20px;
+    width: 80%;
+    border: 1px solid rgba(0, 0, 0, .24);
+}
+
+.question_title{
+    width: 76%;
+    font-size: 22px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.votes_answers{
+    position: absolute;
+    right: 25%;
+}
+
+.number{
+    color: teal;
+    font-family: UbuntuBold;
+}
+
+.sidebar_list{
+    list-style: none;
+}
+
+.sidebar_list ul{
+    list-style: none;
+}
+
+.ask_a_question{
+    color: white;
+    background: cornflowerblue;
+    padding: 12px 18px;
+    border: 1px #777777 solid;
+    border-radius: 13px;
+    margin-bottom: 24px;
+}
+
+.sidebar_list ul li{
+    padding-left: 22px;
+}
+
+.sidebar_list ul{
+    background-color: cornsilk;
+    padding: 20px;
+}
+
+.sidebar_list a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 14px;
+}
+
+.sidebar_list ul a:hover{
+    background-color: gold !important;
+}

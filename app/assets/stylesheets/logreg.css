@@ -1,0 +1,86 @@
+@font-face{
+    font-family: "Ubuntu";
+    src: url("../Fonts/Ubuntu-M.ttf");
+}
+@font-face{
+    font-family: "UbuntuLight";
+    src: url("../Fonts/Ubuntu-L.ttf");
+}
+
+@font-face{
+    font-family: 'UbuntuBold';
+    src: url("../Fonts/Ubuntu-B.ttf");
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    overflow: hidden;
+    background: radial-gradient(wheat, white);
+    background-repeat: no-repeat;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    height: 100%;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    border: #9e9e9e 1px solid;
+    text-align: center;
+    font-size: 22px;
+    font-family: Ubuntu;
+}
+
+.content form{
+    height: 100%;
+    width: 100%;
+        position: absolute;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 0 0 40px 40px;
+}
+
+.logo{
+    position: relative;
+    font-family: UbuntuLight;
+    text-align: center;
+    font-size: 31px;
+    margin: 13px 0 22px 0;
+}
+
+.logo b{
+    font-family: UbuntuBold;
+}
+
+
+input{
+    box-sizing: border-box;
+    border: #9f9f9f 1px solid;
+    padding: 4px 22px;
+    border-radius: 13px;
+    font-size: 13px;
+    color: #4f4f4f;
+    font-style: italic;
+    text-align: center;
+    cursor: context-menu;
+    background-color: wheat;
+}
+input[type="submit"]{
+    width: 130px;
+    height: 58px;
+    margin-top: 13px;
+    font-style: normal;
+    color: black;
+    font-size: 22px;
+    padding: 0px;
+}
+/* 
+@media only all and (max-height: 900px){
+    .content{
+        margin:  auto;
+    }
+} */

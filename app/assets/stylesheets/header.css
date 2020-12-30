@@ -1,0 +1,199 @@
+/*Fonts imported*/
+@font-face{
+    font-family: "UbuntuLight";
+    src: url("../fonts//Ubuntu-L.ttf");
+}
+
+@font-face{
+    font-family: 'UbuntuBold';
+    src: url("../fonts/Ubuntu-B.ttf");
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+textarea{
+    resize: none !important;
+}
+
+body{
+    font-family: UbuntuLight;
+}
+
+/*styling*/
+
+.header{
+    background: wheat;
+    width: 100%;
+    border-bottom: 1px rgba(0, 0, 0, 0.17) solid;
+}
+
+.logo{
+    float: left;
+    line-height: 80px;
+    margin-top: 10px;
+    font-size: 40px;
+    margin-left: 130px;
+    width: 20%;
+}
+
+.logo b{
+    font-family: UbuntuBold;
+}
+
+nav{
+    height: 100%;
+}
+
+nav:after{
+    content:'';
+    clear:both;
+    display: table;
+}
+
+nav ul{
+    float: right;
+    list-style: none;
+    margin-right: 130px;
+    position: relative;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 4px;
+    background-color: wheat;
+}
+
+nav ul li a{
+    padding: 13px 17px;
+    line-height: 80px;
+    font-size: 22px;
+    font-family: UbuntuBold;
+    display: block;
+    color: black !important;
+}
+
+nav ul ul{
+    position: absolute;
+    z-index: 1;
+    top: 105px;
+    display: none;
+    width: 125px;
+    border-top: black 4px solid;
+}
+
+nav ul ul li{
+    box-sizing: border-box;
+    position: relative;
+    margin: 0px;
+    width: 125px;
+    float: none;
+    border-bottom: rgb(201, 179, 139) 1px solid;
+}
+
+nav ul ul li a{
+    font-family: UbuntuLight;
+}
+
+nav ul li a:hover{
+    background-color: rgb(216, 196, 158);
+}
+
+nav ul li a:active{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(184, 166, 133);
+}
+
+.show{
+    display: list-item !important;
+}
+
+.stuff .search{
+    padding: 6px;
+    margin-top: 8px;
+    /* margin-right: 16px; */
+    margin-left: 16px;
+    border: none;
+    font-size: 17px;
+    margin: auto;
+    width: 220px;
+    background-color: white;
+}
+#button{
+    display: none;
+}
+.favicon{
+    display: none;
+}
+
+@media only all and (max-width: 895px){
+    .logo{
+        margin: 0px;
+        padding-left: 13px;
+        width: 100%;
+        display: block;
+        font-size: 26px;
+    }
+    nav{
+        width: 100%;
+    }
+    nav ul{
+        margin-right: 0px;
+        float: left;
+        padding-bottom: 40px;
+        width: 100%;
+        display: none;
+    }
+    nav ul li, nav ul ul li{
+        display: inline-block;
+        width: 100%;
+        margin: 0px;
+        padding-left: 22px;
+    }
+    nav ul li a{
+        font-size: 17px;
+    }
+    .stuff .search, .stuff{
+        margin: 0px;
+        float: none;
+        width: 98%;
+        margin: auto;
+    }
+    nav ul ul{
+        top: 70px;
+        margin: 0px;
+        position: static;
+    }
+    .sicon{
+        display: none;
+    }
+    .favicon{
+        display: block;
+        line-height: 80px;
+        font-size: 35px;
+        position: absolute;
+        right: 20px;
+    }
+    [id^=button]:checked + ul{
+        display: block;
+    }
+}
+.sicon{
+    float: left;
+    background-color: white;
+    margin: 0px;
+    padding: 0px;
+    height: 33px;
+    width: 33px;
+}
+.notification{
+    float: right;
+    font-size: 4px;
+    color: red;
+    position: absolute;
+}

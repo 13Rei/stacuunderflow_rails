@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+@font-face{
+    font-family: "UbuntuLight";
+    src: url("../Fonts/Ubuntu-L.ttf");
+}
+
+@font-face{
+    font-family: 'UbuntuBold';
+    src: url("../Fonts/Ubuntu-B.ttf");
+}
+
+.content{
+    width: 76vw;
+    height: 100vh;
+    margin: auto;
+    background: linear-gradient(wheat, yellow);
+}
+
+.question{
+    position: relative;
+    top: 40px;
+}
+
+.inner_q{
+    width: 60%;
+    margin: auto;
+    font-family: UbuntuBold;
+}
+
+.data{
+    font-size: 22px;
+    box-sizing: border-box;
+    margin: 12px 4px;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 13px;
+    border-bottom: teal 4px solid;
+    transition: border-bottom;
+    transition-duration: .2s;
+    cursor: default;
+}
+
+.data:focus{
+    border-bottom: cyan 8px solid;
+}
+
+.submit{
+    margin-top: -500px;
+    font-size: 24px;
+    margin: 12px 4px;
+    padding: 26px 34px;
+    border: none;
+    background: green;
+    color: white;
+    border-radius: 4px;
+}
+
+.submit:hover{
+    color: black;
+    background: teal;
+    cursor: pointer;;
+}
+
+.submission_sent{
+    text-align: center;
+}
+
+.tags{
+    float: right;
+    width: 200px;
+    height: 220px;
+    font-size: 22px;
+    color: white;
+    background-color: teal;
+    border-radius: 12px;
+}
+
+.tags option{
+    padding: 22px;
+}
+
+.tags option:checked{
+    background: turquoise -webkit-linear-gradient(bottom, turquoise 0%, turquoise 100%);
+}

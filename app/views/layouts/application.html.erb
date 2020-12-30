@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Railsproj</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">-->
+    <script>
+        function menu() {
+            document.getElementById("inner_dropdown").classList.toggle("show");
+        }
+        window.onclick = function(event) {
+            if (!event.target.matches('.menuButton')   ) {
+                if(document.getElementById("inner_dropdown").classList.contains('show')){
+                    document.getElementById("inner_dropdown").classList.remove('show');
+                }
+            }
+        } 
+    </script>
+  </head>
+
+  <body>
+      <nav class="header">
+          <div class="logo">
+              STACK<b>UNDERFLOW</b>
+          </div>
+          <label for="button" class="favicon">
+              <span class="fa fa-bars" aria-hidden="true"></span>
+          </label>
+          <input type="checkbox" id="button">
+          <ul class="nav menu">
+              <li class="home"><a href="../posts#show">HOME</a></li>
+              <li class="about"><a href="#">ABOUT</a></li>
+<!--              <li class="profile"><a href="#" class="menuButton" onClick="menu()">PROFILE<i class="fa fa-circle notification" aria-hidden="true"></i></a>    -->
+              </li>
+              <li class="login"><a href="../users/sign_in">LOG IN</a></li>
+              <li class="register"><a href="../users/sign_up">REGISTER</a></li>
+              <li>
+                  <div class="stuff">
+                      <input class="search" type="text" placeholder="Search....">
+                      <i class="fab fa-twitter fa-2x"></i>
+                      <input type="submit" hidden href="">
+                  </div>
+              </li>
+          </ul>
+      </nav>
+
+    <%= yield %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <footer class="footer">
+        <div class="footer_content">
+            <div class="left">
+                <h2 class="footer_logo">STACK<b>UNDERFLOW</b></h2>
+                <div class="inner_foot_content left_foot">
+                    <p class="item"><a href="../posts#show">Home</a></p>
+                    <p class="item"><a href="../users/sing_in">Profile</a></p>
+                    <p class="item"><a href="../users/sign_up">Log Out</a></p>
+                </div>
+            </div>
+            <div class="right">
+                <h2 class="footer_logo2">STACK<b>UNDERFLOW</b></h2>
+                <div class="inner_foot_content right_foot">
+                    <p class="item"><a href="">About Us</a></p>
+                    <p class="item"><a href="">Questions</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
