@@ -1,3 +1,20 @@
+<head>
+    <link rel="stylesheet" href="../../assets/stylesheets/question_poster.css">
+    <%= stylesheet_link_tag "question_poster", :media => "all" %>
+</head>
+
+<body>
+    <div class="content">
+        <div class="question">
+            <div class="inner_q">
+                <h1>Ask a question:</h1>
+                <br>
+                <%= render 'form', post: @post %>
+            </div>
+        </div>
+    </div>
+</body>
+
 <h1>New Post</h1>
 
 <%= render 'form', post: @post %>

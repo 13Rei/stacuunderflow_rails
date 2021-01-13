@@ -1,4 +1,42 @@
-<h1>Posts</h1>
+<head>
+  <link rel="stylesheet" href="../../assets/stylesheets/index.css">
+  <%= stylesheet_link_tag    "index", :media => "all" %>
+</head>
+
+<div class="spacer"></div>
+    <div class="content">
+        <div class="sidebar">
+          <ul class="sidebar_list">
+            <li class="ask_a_question"><%= link_to 'Ask a question', new_post_path %></li>
+          </ul>
+        </div>
+        <div class="middle_content">
+            <h1 class="page_heading">Some questions</h1>
+            <% @posts.each do |post| %>
+            <div class="question_container">
+                
+                    <div class="inner_question_container">
+                        <div class="votes_answers">
+
+                            <p><span class="number"></span> answers</p>
+                        </div>
+                        <h1 class="question_title">
+                            <a href=""><%= link_to post.title, post %></a>
+                        </h1>
+                       
+                        <a href="">
+                            <p class="userneim">
+                              <%= post.user.name %>
+                            </p>
+                        </a>
+                    </div>
+            </div>
+            <% end %>
+
+        </div>
+    </div>
+
+<!--<h1>Posts</h1>
 
 <table>
   <thead>
@@ -22,6 +60,5 @@
   </tbody>
 </table>
 
-<br>
+<br>-->
 
-<%= link_to 'New Post', new_post_path %>
