@@ -5,8 +5,8 @@ ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use pg as the database for Active Record
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -61,6 +61,18 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'devise'
+gem 'devise', :git => "https://github.com/heartcombo/devise.git", ref: '8bb358cf80a632d3232c3f548ce7b95fd94b6eb2'
 
 gem 'acts-as-taggable-on', '~> 7.0'
+
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'activerecord-session_store'
+
+gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
+
+gem 'commontator'
+gem 'jquery-rails'
+gem 'sassc-rails'
+
+gem "wysiwyg-rails"

@@ -23,20 +23,27 @@
             <div class="question_body">
                   <%= @post.body %>
             </div>
-            <div class="tags">
+            <div class="tags" style="background-color: gray;">
                 <%= @post.tag_list %>
+            </div>
+            <div class="options">
+                <% if current_user == @post.user %>
+                    <%= link_to "Delete", @post, method: :delete, data: {confirm: "You sure?"}, class: 'label alert' %>                  
+                <% end %>
             </div>
         </div>
         <div class="answer_section">
             <div class="answers">
-                    
+                    <%= @post.comments.count %> answers
+                    <%= render @post.comments%>
             </div>
             <div class="post_an_answer">
-                <form action="post_an_answer.php" method="POST">
+                <%= render 'comments/form' %>
+                <!--<form action="post_an_answer.php" method="POST">
                     <textarea name="answer" id="answer" cols="40" rows="16"></textarea>
-                    <input type="hidden" name="question_id" value="<?php echo $questionid;?>">
+                    <input type="hidden" name="question_id" value="">
                     <input type="submit" value="Submit" class="submit" name="submit">
-                </form>
+                </form>-->
             </div>
         </div>
     </div>

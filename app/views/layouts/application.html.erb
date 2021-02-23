@@ -10,20 +10,12 @@
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        function menu() {
-            document.getElementById("inner_dropdown").classList.toggle("show");
-        }
-        window.onclick = function(event) {
-            if (!event.target.matches('.menuButton')   ) {
-                if(document.getElementById("inner_dropdown").classList.contains('show')){
-                    document.getElementById("inner_dropdown").classList.remove('show');
-                }
-            }
-        } 
-    </script>
   </head>
 
   <body>
@@ -40,7 +32,7 @@
               <li class="about"><a href="#">ABOUT</a></li>
                 <% if user_signed_in? %>
                 <li class="profile">
-                    <a href="#" class="menuButton" onClick="menu()">PROFILE</a>
+                    <a href="../users/edit" class="menuButton" onClick="menu()">PROFILE</a>
                 </li>
                 <li class="logout">
                     <%= link_to "LOG OUT", destroy_user_session_path, method: 'delete' %> 
@@ -67,8 +59,13 @@
                 <h2 class="footer_logo">STACK<b>UNDERFLOW</b></h2>
                 <div class="inner_foot_content left_foot">
                     <p class="item"><a href="../posts#show">Home</a></p>
-                    <p class="item"><a href="../users/sing_in">Profile</a></p>
-                    <p class="item"><a href="../users/sign_up">Log Out</a></p>
+                    <% if user_signed_in? %>
+                        <p class="item"><a href="../users/edit">Profile</a></p>
+                        <%= link_to "Sign Out", destroy_user_session_path, method: 'delete' %> 
+                    <% else %>
+                    <p class="item"><a href="../users/sing_in">Sign In</a></p>
+                    <p class="item"><a href="../users/sign_up">Sign Up</a></p>
+                    <% end %>
                 </div>
             </div>
             <div class="right">

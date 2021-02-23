@@ -1,0 +1,44 @@
+<head>
+    <title>Railsproj</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'header', :media => "all"%>
+    <%= stylesheet_link_tag 'footer', :media => "all"%>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+<nav class="header">
+          <div class="logo">
+              STACK<b>UNDERFLOW</b>
+          </div>
+          <label for="button" class="favicon">
+              <span class="fa fa-bars" aria-hidden="true"></span>
+          </label>
+          <input type="checkbox" id="button">
+          <ul class="nav menu">
+              <li class="home"><a href="../posts#show">HOME</a></li>
+              <li class="about"><a href="#">ABOUT</a></li>
+                <% if user_signed_in? %>
+                <li class="profile">
+                    <a href="../users/edit" class="menuButton" onClick="menu()">PROFILE</a>
+                </li>
+                <li class="logout">
+                    <%= link_to "LOG OUT", destroy_user_session_path, method: 'delete' %> 
+                </li>
+                <% else %>
+                    <li class="login"> <%= link_to "LOG IN", new_user_session_path %> </li>
+                    <li class="register"> <%= link_to "REGISTER", new_user_registration_path %> </li>
+                <% end %>
+              <li>
+                  <div class="stuff">
+                      <input class="search" type="text" placeholder="Search....">
+                      <i class="fab fa-twitter fa-2x"></i>
+                      <input type="submit" hidden href="">
+                  </div>
+              </li>
+          </ul>
+      </nav>

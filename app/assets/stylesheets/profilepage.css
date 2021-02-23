@@ -102,7 +102,9 @@ input[type="file"]{
 }
 .side_box{
     position: relative;
-    padding-left: 300px;
+    padding-left: 200px;
+    margin-right: 100px;
+    float: right;
 }
 .side_box span{
     width: 200px;
@@ -190,4 +192,14 @@ input[type="file"]{
     text-align: center;
     font-size: 22px;
     color: white;
+}
+
+.submit{
+    height: 80px;
+    width: 170px;
+    font-size: 15px;
+    padding: 4px;
+    color: white;
+    background-color: red;
+    border-radius: 3px;
 }

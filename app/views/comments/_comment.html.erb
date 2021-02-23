@@ -1,0 +1,9 @@
+<br><br><%= comment.name %><br>
+<%= comment.body %><br>
+<%= time_ago_in_words(comment.created_at) %><br>
+<% if comment.name == current_user %>
+    <%= link_to 'Delete', [comment.post, comment], method: :delete %>
+<% end %>
+<% if comment.name == current_user %>
+    <%= link_to 'Mark Correct', [comment.post, comment], method: :update%>
+<% end %><br>

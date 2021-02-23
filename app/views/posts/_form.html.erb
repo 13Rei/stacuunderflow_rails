@@ -1,7 +1,14 @@
 <head>
     <link rel="stylesheet" href="../../assets/stylesheets/question_poster.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/froala.css">
     <%= stylesheet_link_tag "question_poster", :media => "all" %>
-</head>
+    <script type="text/javascript" src = "../../assets/froala_editor.pkgd.min.js"></script>
+    <script>
+        new FroalaEditor('#edit', {
+   
+        })
+    </script>
+    </head>
 <%= form_with(model: post, local: true) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
@@ -22,11 +29,11 @@
 
   <div class="field">
     <%= form.label :body, :class => 'input_label' %>
-    <%= form.text_area :body, :class => 'body data'  %>
+    <%= form.text_area :body, cols: 40, rows: 10, :class => 'body data'  %>
   </div>
 
   <div class="field">
-    <%= form.label :tag_list, :class => 'input_label' %>
+    Tag list (split with ,)
     <%= form.text_field :tag_list, :class => 'title data' %>
   </div>
 

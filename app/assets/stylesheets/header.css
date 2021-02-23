@@ -45,9 +45,6 @@ body{
     font-family: UbuntuBold;
 }
 
-nav{
-    height: 100%;
-}
 
 nav:after{
     content:'';

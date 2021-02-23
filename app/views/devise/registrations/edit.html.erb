@@ -1,4 +1,39 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<%= render "layouts/header", :media => "all" %>
+
+<%= stylesheet_link_tag 'profilepage', :media => "all"%>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+
+
+<body>
+    <div class="content">
+        <div class="spacer"></div>
+        <div class="user">
+        <form method="POST" enctype="multipart/form-data" action="profile_save.php">
+        <div>
+            <%= f.submit "Save", :class=>'save' %>
+        </div>
+            <table class="info_container">
+                <tr>
+                    <td>
+                          <%= f.text_field :name, autofocus: true, autocomplete: "name", :class => 'data' %><br>
+                          <%= f.email_field :email, autofocus: true, autocomplete: "email", :class => 'data' %>
+                    </td>
+                    <td class="side_box">
+                          <%= f.password_field :password, autocomplete: "new-password", :placeholder =>'new password', :class=>'data' %><br>
+                          <%= f.password_field :password_confirmation, autocomplete: "new-password", :placeholder => 'new password confirm', :class=>'data' %><br>
+                          <%= f.password_field :current_password, autocomplete: "current-password", :placeholder => 'current password', :class=>'data' %>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        </div>
+    </div>
+</body>
+
+<% end %>
+
+<!-- <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -40,4 +75,6 @@
 
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
+<%= link_to "Back", :back %>-->
+
+<%= render "layouts/footer" %>
