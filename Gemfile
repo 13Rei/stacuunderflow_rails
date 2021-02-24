@@ -75,5 +75,6 @@ gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
 gem 'commontator'
 gem 'jquery-rails'
 gem 'sassc-rails'
+gem 'sass-listen', '4.0.0'
 
 gem "wysiwyg-rails"
