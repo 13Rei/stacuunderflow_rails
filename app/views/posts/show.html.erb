@@ -12,11 +12,6 @@
             <h1 class="question_title">
               <%= @post.title %>
             </h1>
-            <div class="delete">
-                <a class="ajkon" onclick="confirm('Are you sure you want to delete this question?')" href="">
-                    <i href="" class="fa fa-times ajkon xicon xicon_posted" aria-hidden="true"></i>
-                </a>
-            </div>
             <div class="question_author">
                 <%= @post.user.name %>
             </div>
@@ -28,7 +23,7 @@
             </div>
             <div class="options">
                 <% if current_user == @post.user %>
-                    <%= link_to "Delete", @post, method: :delete, data: {confirm: "You sure?"}, class: 'label alert' %>                  
+                    <%= link_to "Delete", @post, method: :delete, data: {confirm: "You sure?"}, class: 'label alert delete_btn' %>                  
                 <% end %>
             </div>
         </div>
@@ -37,6 +32,7 @@
                     <%= @post.comments.count %> answers
                     <%= render @post.comments%>
             </div>
+            <% if user_signed_in? %>
             <div class="post_an_answer">
                 <%= render 'comments/form' %>
                 <!--<form action="post_an_answer.php" method="POST">
@@ -45,6 +41,7 @@
                     <input type="submit" value="Submit" class="submit" name="submit">
                 </form>-->
             </div>
+            <% end %>
         </div>
     </div>
 </body>

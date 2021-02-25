@@ -1,6 +1,6 @@
 <%= form_for([@post,@post.comments.build]) do |f| %>
     <p>
-        <%= f.hidden_field :name, value: current_user %>
+        <%= f.hidden_field :name, value: current_user.name %>
     </p>
     <p>
         <%= f.label :body%><br>

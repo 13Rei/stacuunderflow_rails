@@ -203,3 +203,21 @@ input[type="file"]{
     background-color: red;
     border-radius: 3px;
 }
+.delete_btn, .mark_as_correct_btn{
+    background-color: red;
+    padding: 8px;
+    border-radius: 12px;
+    border: 4px solid maroon;
+    color: white;
+    margin: 4px;
+}
+
+.mark_as_correct_btn{
+    background-color: teal;
+    border-color: navy;
+}
+
+.answer{
+    background-color: rgb(245, 220, 179);
+    border: 8px solid whitesmoke;
+}

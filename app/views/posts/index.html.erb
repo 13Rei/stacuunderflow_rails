@@ -10,7 +10,9 @@
     <div class="content">
         <div class="sidebar">
           <ul class="sidebar_list">
-            <li class="ask_a_question"><%= link_to 'Ask a question', new_post_path %></li>
+            <% if user_signed_in? %>
+              <li class="ask_a_question"><%= link_to 'Ask a question', new_post_path %></li>
+            <% end %>
           </ul>
         </div>
         <div class="middle_content">
@@ -26,8 +28,7 @@
                 
                     <div class="inner_question_container">
                         <div class="votes_answers">
-
-                            <p><span class="number"></span> answers</p>
+                            <p><span class="number"></span> <i>answers:</i> <b><%= post.comments.count %></b></p>
                         </div>
                         <h1 class="question_title">
                             <a href=""><%= link_to post.title, post %></a>
