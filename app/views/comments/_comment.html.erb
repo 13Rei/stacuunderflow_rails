@@ -8,10 +8,15 @@
 <div class="tags">
 <%= time_ago_in_words(comment.created_at) %><br>
 </div>
-<% if comment.name == current_user %>
-    <%= link_to 'Delete', [comment.post, comment], method: :delete, :class => 'delete_btn' %>
+<% if user_signed_in? %>  
+    <% if comment.name == current_user %>
+        <%= link_to 'Delete', [comment.post, comment], method: :delete, :class => 'delete_btn' %>
+    <% end %>
+    <% if comment.post.user_id == current_user.id %>
+        <%= button_to 'Mark Correct', [comment.post, comment], :method => :update, :class=>'mark_as_correct_btn'%>
+    <% end %><br>
 <% end %>
-<% if comment.post.user_id == current_user.id %>
-    <%= link_to 'Mark Correct', [comment.post, comment], :method => :update, :class=>'mark_as_correct_btn'%>
-<% end %><br>
+<% if comment.isCorrect %>
+  <p class="question_author correct_answer">Correct answer</p>
+<% end %>
 </div>

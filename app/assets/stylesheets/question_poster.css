@@ -87,3 +87,8 @@
 .tags option:checked{
     background: turquoise -webkit-linear-gradient(bottom, turquoise 0%, turquoise 100%);
 }
+
+.correct_answer{
+    font-family: UbuntuBold;
+    color: turquoise;
+}
