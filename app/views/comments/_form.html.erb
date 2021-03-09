@@ -1,9 +1,9 @@
 <%= form_for([@post,@post.comments.build]) do |f| %>
     <p>
         <%= f.hidden_field :name, value: current_user.name %>
+        <%= f.hidden_field :isCorrect, value: 0 %>
     </p>
     <p>
-        <%= f.label :body%><br>
         <%= f.text_area :body, :cols => 40, :rows => 10 %>
     </p>
     <br>

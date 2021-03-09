@@ -24,17 +24,20 @@
             -->
             <h1 class="page_heading">Some questions</h1>
             <% @posts.reverse_each do |post| %>
-            <div class="question_container">
-                
-                    <div class="inner_question_container">
-                        <div class="votes_answers">
-                            <p><span class="number"></span> <i>answers:</i> <b><%= post.comments.count %></b></p>
-                        </div>
-                        <h1 class="question_title">
-                            <a href=""><%= link_to post.title, post %></a>
-                        </h1>
-                    </div>
-            </div>
+                <div class="question_container">
+                      <% if Comment.find_by(isCorrect: 1, post_id: post.id) %>
+                        <div class="inner_question_container answered_question_container">
+                      <% else %>
+                        <div class="inner_question_container">
+                      <% end %>
+                          <div class="votes_answers">
+                              <p><span class="number"></span> <i>answers:</i> <b><%= post.comments.count %></b></p>
+                          </div>
+                          <h1 class="question_title">
+                              <a href=""><%= link_to post.title, post %></a>
+                          </h1>
+                      </div>
+              </div>
             <% end %>
         </div>
     </div>

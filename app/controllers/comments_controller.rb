@@ -13,6 +13,8 @@ class CommentsController < ApplicationController
     end
     
     def update
-        update_attribute(:isCorrect => 1)
+        @post = Post.find(params[:post_id])
+        @post.comments.find(params[:id]).update(:isCorrect => 1)
+        redirect_to post_path(@post)
     end
 end

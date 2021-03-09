@@ -29,18 +29,15 @@
         </div>
         <div class="answer_section">
             <div class="answers">
-                    <%= @post.comments.count %> answers
+                    <p class="number_of_comments">
+                        <%= @post.comments.count %> answers
+                    </p>
                     <%= render @post.comments%>
             </div>
             <% if user_signed_in? %>
-            <div class="post_an_answer">
-                <%= render 'comments/form' %>
-                <!--<form action="post_an_answer.php" method="POST">
-                    <textarea name="answer" id="answer" cols="40" rows="16"></textarea>
-                    <input type="hidden" name="question_id" value="">
-                    <input type="submit" value="Submit" class="submit" name="submit">
-                </form>-->
-            </div>
+                <div class="post_an_answer">
+                    <%= render 'comments/form' %>
+                </div>
             <% end %>
         </div>
     </div>

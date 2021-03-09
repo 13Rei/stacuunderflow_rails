@@ -220,4 +220,10 @@ input[type="file"]{
 .answer{
     background-color: rgb(245, 220, 179);
     border: 8px solid whitesmoke;
+    border-radius: 14px !important;
+}
+
+.number_of_comments{
+    padding: 20px;
+    font-size: 18px;
 }
