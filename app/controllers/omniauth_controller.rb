@@ -8,9 +8,9 @@ class OmniauthController < ApplicationController
             flash[:error] = 'There was a problem singing you in through Google. Please register or try signing in later.'
             redirect_to new_user_registration_url
         end
-      end
+    end
     
-      def failure
+    def failure
         flash[:error] = 'There was a problem signing you in. Please register or try signing in later.'
         redirect_to new_user_registration_url
     end
