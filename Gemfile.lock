@@ -102,9 +102,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    commontator (6.3.1)
-      rails (>= 5.2)
-      will_paginate
     concurrent-ruby (1.1.8)
     crass (1.0.6)
     erubi (1.10.0)
@@ -269,7 +266,6 @@ GEM
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    will_paginate (3.3.0)
     wysiwyg-rails (3.2.6)
       railties (>= 3.2.6, < 7.0)
     xpath (3.2.0)
@@ -286,7 +282,6 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
-  commontator
   devise!
   jbuilder (~> 2.5)
   jquery-rails

@@ -72,7 +72,6 @@ gem 'activerecord-session_store'
 
 gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
 
-gem 'commontator'
 gem 'jquery-rails'
 gem 'sassc-rails'
 gem 'sass-listen', '~> 4.0.0'
