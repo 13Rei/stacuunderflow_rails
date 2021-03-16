@@ -8,6 +8,15 @@ Rails.application.config.assets.version = '1.0'
 # Add Yarn node_modules folder to the asset load path.
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( index.css )
+Rails.application.config.assets.precompile += %w( admin.css )
+Rails.application.config.assets.precompile += %w( application.css )
+Rails.application.config.assets.precompile += %w( footer.css )
+Rails.application.config.assets.precompile += %w( froala.css )
+Rails.application.config.assets.precompile += %w( header.css )
+Rails.application.config.assets.precompile += %w( logreg.css )
+Rails.application.config.assets.precompile += %w( profilepage.css )
+Rails.application.config.assets.precompile += %w( question_poster.css )
+
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
