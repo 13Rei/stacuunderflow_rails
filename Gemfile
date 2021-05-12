@@ -66,8 +66,7 @@ gem 'devise', :git => "https://github.com/heartcombo/devise.git", ref: '8bb358cf
 
 gem 'acts-as-taggable-on', '~> 7.0'
 
-gem 'omniauth'
-gem 'omniauth-google-oauth2'
+gem 'omniauth', "~> 1.9.1"
 gem 'activerecord-session_store'
 
 gem 'webpacker', git: 'https://github.com/rails/webpacker.git'
